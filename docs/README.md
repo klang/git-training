@@ -59,8 +59,11 @@ If everything goes according to plan, each group will have to deal with conflict
 ## nice aliases
 
     git config --global alias.lol 'log --oneline --graph --all --decorate'
-    git config --global alias.incoming 'log develop ^origin/develop'
-    git config --global alias.outgoing 'log origin/develop ^develop'
+    git config --global alias.lols 'log --oneline --graph --all --decorate --branches --remotes --tags'
+    git config --global alias.incomingd 'log --oneline --graph develop ^origin/develop'
+    git config --global alias.outgoingd 'log --oneline --graph origin/develop ^develop'
+    git config --global alias.outgoingm 'log --oneline --graph --decorate master ^origin/master'
+    git config --global alias.incomingm 'log --oneline --graph --decorate origin/master ^master'
     git config --global alias.unstage 'reset HEAD --'
 
 ## presenting yourself to git
