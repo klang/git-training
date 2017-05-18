@@ -42,5 +42,6 @@ or just for a project
     echo "logs" > .gitignore
     git init; git add .; git commit -m 'initial'
 
-## advanced time tracking
+## advanced aliases
     git config  --global alias.mylog '!git log --pretty=format:"%h%x09%an%x09%ad%x09%s" --author="$(git config user.name)"'
+    git config --global alias.add-modified '!git ls-files --modified | xargs git add'
