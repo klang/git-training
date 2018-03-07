@@ -11,6 +11,8 @@ The first thing I do when I help people with `git`, is to have them introduce a 
     git config --global alias.outgoingm 'log --oneline --graph --decorate master ^origin/master'
     git config --global alias.incomingm 'log --oneline --graph --decorate origin/master ^master'
     git config --global alias.unstage 'reset --'
+    git config --global alias.clone-branches '! git branch -a | sed -n "/\/HEAD /d; /\/master$/d; /remotes/p;" | xargs -L1 git checkout -t'
+
 
 ### colors are always nice
 
