@@ -1,20 +1,20 @@
-      .--f1--o--o--
-     /
-----o--master----o---
+          .--f1--o--o--
+         /
+   ----o--master----o---
 
 rebase laver nye commits for ændringer på f1.
 de oprindelige commits bliver garbage collected "på et tidspunkt"
 
 
-      .--o--o--    .--f1--o--o--
-     /            /
-----o--master----o---
+          .--o--o--    .--f1--o--o--
+         /            /
+    ----o--master----o---
 
 push til origin fra en anden udvikler, før force push, vil opdatere den gamle f1, dén branch som denne udvikler ser. 
 
-      .--o--o--o-  .--f1--o--o--
-     /            /
-----o--master----o---
+          .--o--o--o-  .--f1--o--o--
+         /            /
+    ----o--master----o---
 
 
 efter force push, vil denne udviler være lidt forvirret, men heldigvis kan commit fiskes frem fra reflog og sættes ind det rigtige sted. (af den anden udvilker)
