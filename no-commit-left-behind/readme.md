@@ -1,6 +1,7 @@
           .--f1--o--o--
          /
-   ----o--master----o---
+    ----o--master----o---
+
 
 rebase laver nye commits for ændringer på f1.
 de oprindelige commits bliver garbage collected "på et tidspunkt"
@@ -9,6 +10,7 @@ de oprindelige commits bliver garbage collected "på et tidspunkt"
           .--o--o--    .--f1--o--o--
          /            /
     ----o--master----o---
+
 
 push til origin fra en anden udvikler, før force push, vil opdatere den gamle f1, dén branch som denne udvikler ser. 
 
