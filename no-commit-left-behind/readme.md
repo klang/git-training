@@ -22,27 +22,31 @@ push til origin fra en anden udvikler, før force push, vil opdatere den gamle f
 efter force push, vil denne udviler være lidt forvirret, men heldigvis kan commit fiskes frem fra reflog og sættes ind det rigtige sted. (af den anden udvilker)
 
 
-run ./reset.sh in a new directory
+run 
+
+    ./reset.sh 
+    
+in a new directory
 
 in one shell, go to project-group-force-pusher
 
 
-  git pull origin master --rebase
+    git pull origin master --rebase
 
-  # resolve conflicts
+    # resolve conflicts
 
 at this point, git status will tell you to pull, but fast-forward is not possible .. 
 (google suggest some ways to fix this)
 
 so .. we force push
 
-and we are rejectd .. 
+and we are rejected .. 
 
-  
+.. so, is git smart enough to detect that this is wrong?
 
 in another shell, before pushing anything in the first shell, go to project-group-pusher
 
-  echo "maybe lost commit" >> amazing.txt
-  git -c commit.gpgsign=false commit -m 'pusher has made a change'
-  git push
+    echo "maybe lost commit" >> amazing.txt
+    git -c commit.gpgsign=false commit -m 'pusher has made a change'
+    git push
   
